@@ -1,0 +1,49 @@
+<div style="padding: 10px">
+</div>
+<div class="col-md-4">
+  <h2 class="text-center">Add User Contact</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label>First Name:</label>
+      <input formControlName="firstname" placeholder="First Name" name="firstname" class="form-control">
+      <div class="text-danger" *ngIf="isInvalid('firstname')">
+        First Name is empty.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Last Name:</label>
+      <input formControlName="lastname" placeholder="Last name" name="lastname" class="form-control">
+      <div class="text-danger" *ngIf="isInvalid('lastname')">
+        Last Name is empty.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Email address:</label>
+      <input type="email" formControlName="email" placeholder="Email" name="email" class="form-control">
+      <div class="text-danger" *ngIf="isInvalid('email')">
+        Email is not valid.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Phone:</label>
+      <input formControlName="phone" placeholder="Phone" name="phone" class="form-control">
+      <div class="text-danger" *ngIf="isInvalid('phone')">
+        Phone number is not valid.
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Status</label>
+      <select formControlName="status" name="status" id="status" class="form-control">
+        <option value="Active">Active</option>
+        <option value="Inactive">Inactive</option>
+      </select>
+    </div>
+
+    <button button [disabled]="addForm.invalid" class="btn btn-success">Submit</button>
+    <button class="btn btn-danger ml-2 " (click)="onCancel()">Cancel</button>
+  </form>
+</div>
