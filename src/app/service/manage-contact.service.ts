@@ -24,7 +24,7 @@ export class ManageContactService {
     status: 'Inactive'
   },{
     id: 3,
-    firstname: 'Cristiano ',
+    firstname: 'Cristiano',
     lastname: 'Ronaldo',
     email: 'cristiano.ronaldo@gmail.com',
     phone: 9898989898,

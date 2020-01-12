@@ -30,7 +30,7 @@
 
     <div class="form-group">
       <label>Phone:</label>
-      <input formControlName="phone" placeholder="Phone" name="phone" class="form-control">
+      <input formControlName="phone" placeholder="Phone" name="phone" class="form-control" minlength=10 maxlength=10>
       <div class="text-danger" *ngIf="isInvalid('phone')">
         Phone number is not valid.
       </div>

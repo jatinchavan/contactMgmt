@@ -8,7 +8,7 @@
       <label>First Name:</label>
       <input formControlName="firstname" placeholder="First Name" name="firstname" class="form-control">
       <div class="text-danger" *ngIf="isInvalid('firstname')">
-        First Name is empty.
+        First Name is empty/invalid.
       </div>
     </div>
 
@@ -16,7 +16,7 @@
       <label>Last Name:</label>
       <input formControlName="lastname" placeholder="Last name" name="lastname" class="form-control">
       <div class="text-danger" *ngIf="isInvalid('lastname')">
-        Last Name is empty.
+        Last Name is empty/invalid.
       </div>
     </div>
 
@@ -30,7 +30,7 @@
 
     <div class="form-group">
       <label>Phone:</label>
-      <input formControlName="phone" placeholder="Phone" name="phone" class="form-control">
+      <input formControlName="phone" placeholder="Phone" name="phone" class="form-control" minlength=10 maxlength=10>
       <div class="text-danger" *ngIf="isInvalid('phone')">
         Phone number is not valid.
       </div>

@@ -41,7 +41,7 @@ export class AppViewComponent implements OnInit {
     this.route.navigate(['/edit'])
   }
 
-  onSelect(event:any) {
+  onSelectFname(event:any) {
     const val = event.target.value;
     // console.log(val);
 
@@ -65,7 +65,39 @@ export class AppViewComponent implements OnInit {
         }
         return 0;
       });
-    }else if(val === 'Lowest first'){
+    }
+  }
+
+  onSelectLname(event:any) {
+    const val = event.target.value;
+    // console.log(val);
+
+    if (val === 'Ascending (A-Z)') {
+      this.contactsArray.sort(function (a, b) {
+        if (a.lastname.toUpperCase() < b.lastname.toUpperCase()) {
+          return -1;
+        }
+        if (a.lastname.toUpperCase() > b.lastname.toUpperCase()) {
+          return 1;
+        }
+        return 0;
+      });
+    } else if (val === 'Descending (Z-A)') {
+      this.contactsArray.sort(function (a, b) {
+        if (a.lastname.toUpperCase() > b.lastname.toUpperCase()) {
+          return -1;
+        }
+        if (a.lastname.toUpperCase() < b.lastname.toUpperCase()) {
+          return 1;
+        }
+        return 0;
+      });
+    }
+  }
+
+  onSelectID(event:any){
+    const val = event.target.value;
+    if(val === 'Lowest first'){
       this.contactsArray.sort(function (a, b) {
         if (a.id < b.id) {
           return -1;
