@@ -23,8 +23,10 @@ Total number of model(s): 1
 </ul>
 
 ## Development server
-Download the above sourcecode and extract it the required location. Open CMD/terminal and run 'npm init' to install all the required packagaes.<br>
-Later, run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Step 1: Download the above sourcecode and extract it the required location.<br>
+Step 2: Open CMD/terminal and install latest angular CLI version using `npm install -g @angular/cli`<br>
+Step 3: Run `npm init` to install all the required packagaes.<br>
+Step 4: Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
