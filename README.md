@@ -1,5 +1,6 @@
 # EHIContactApp
 
+Developed this webapp with Angular 7 step by step from scratch. This application manages user contacts with CRUD operations on a local JSON Model.<br><br>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
 
 ## Demo
