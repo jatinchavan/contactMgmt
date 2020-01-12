@@ -19,7 +19,7 @@ import {
   styleUrls: ['./app-view.component.css']
 })
 export class AppViewComponent implements OnInit {
-  contactsArray: Contact[]; // Array<string>
+  contactsArray: Contact[];
 
   constructor(private mcs: ManageContactService, private route: Router) {}
 
@@ -28,7 +28,7 @@ export class AppViewComponent implements OnInit {
     // console.log(this.contactsArray);
   }
   deleteUserContact(usercon: Contact) {
-    if(confirm("Are you sure?")){
+    if(confirm("Are you sure to delete?")){
       this.mcs.deleteContact(usercon);
     }
   }

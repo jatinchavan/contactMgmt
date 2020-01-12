@@ -10,22 +10,22 @@
           </select></th>
         <th>Firstname
           <select class="dropdown-toggle" (change)="onSelectFname($event)">
-            <option value="" disabled>Sort By Name</option>>
+            <option value="" disabled>Sort By Firstname</option>>
             <option> Ascending (A-Z) </option>
             <option> Descending (Z-A) </option>
           </select>
         </th>
         <th>Lastname
-                <select class="dropdown-toggle" (change)="onSelectLname($event)">
-                        <option value="" disabled>Sort By Name</option>>
-                        <option> Ascending (A-Z) </option>
-                        <option> Descending (Z-A) </option>
-                </select>
+          <select class="dropdown-toggle" (change)="onSelectLname($event)">
+            <option value="" disabled>Sort By Lastname</option>>
+            <option> Ascending (A-Z) </option>
+            <option> Descending (Z-A) </option>
+          </select>
         </th>
         <th>Email</th>
         <th>Phone</th>
         <th>Status</th>
-        <th>Modify</th>
+        <th>Action/Operation</th>
       </tr>
     </thead>
     <tbody>
@@ -38,10 +38,10 @@
         <td [ngClass]="{
                   'list-group-item-success' : curr.status==='Active',
                   'list-group-item-danger' : curr.status==='Inactive'
-              }">{{curr.status|uppercase}}</td>
+              }"><b>{{curr.status|uppercase}}</b></td>
         <td>
-          <button class="btn btn-warning" (click)="editUserContact(curr)"
-            [disabled]="curr.status==='Inactive'">Edit</button>
+          <button class="btn btn-warning" (click)="editUserContact(curr)">Edit</button>
+          <!-- [disabled]="curr.status!=='Inactive'" -->
           <button class="btn btn-success ml-1" (click)="toggleStatus(curr.id)">Toggle Status</button>
           <button class="btn btn-danger ml-1" (click)="deleteUserContact(curr)">Delete</button>
         </td>
@@ -51,4 +51,3 @@
 </div>
 
 <a [routerLink]="['/add']" class="btn btn-success ml-2">New Contact</a>
-<a href="#" class="btn btn-outline-success ml-2">Refresh (F5)</a>

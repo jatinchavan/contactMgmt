@@ -21,15 +21,19 @@ export class ManageContactService {
     lastname: 'Chavan',
     email: 'jatinchavan3010@gmail.com',
     phone: 9272111491,
-    status: 'Inactive'
+    status: 'Active'
   },{
     id: 3,
     firstname: 'Cristiano',
     lastname: 'Ronaldo',
     email: 'cristiano.ronaldo@gmail.com',
     phone: 9898989898,
-    status: 'Active'
+    status: 'Inactive'
   } ]
+
+  // emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  nameRegex= /^[a-zA-Z_-]*$/;
+  phoneRegex=/^[0-9]*$/;
 
   getall(){
     return this.contactsArray;
@@ -41,9 +45,9 @@ export class ManageContactService {
   }
 
   deleteContact(contact:Contact){
-    console.log(contact);
-    console.log('------------');
-    console.log(this.contactsArray.indexOf(contact));
+    // console.log(contact);
+    // console.log('------------');
+    // console.log(this.contactsArray.indexOf(contact));
     
     this.contactsArray.splice(this.contactsArray.indexOf(contact),1)
   }

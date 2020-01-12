@@ -22,7 +22,7 @@
 
     <div class="form-group">
       <label>Email address:</label>
-      <input type="email" formControlName="email" placeholder="Email" name="email" class="form-control">
+      <input type="email" formControlName="email" placeholder="Email" name="email" class="form-control" email>
       <div class="text-danger" *ngIf="isInvalid('email')">
         Email is not valid.
       </div>

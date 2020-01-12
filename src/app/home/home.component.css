@@ -7,3 +7,8 @@ li{
 #header{
 text-decoration: underline;
 }
+
+.footer{
+    padding-top: 10px;
+    text-align: center;
+}
